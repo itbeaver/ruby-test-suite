@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C3173AA6 &
         ruby$RUBY_VERSION \
         ruby$RUBY_VERSION-dev \
         libicu-dev git libkrb5-dev cmake build-essential \
-        nodejs npm imagemagick libmagickwand-dev phantomjs wkhtmltopdf file &&\
+        nodejs npm imagemagick libmagickwand-dev phantomjs wkhtmltopdf file sphinxsearch &&\
     localedef ru_RU.UTF-8 -i ru_RU -fUTF-8 &&\
     locale-gen ru_RU.UTF-8 &&\
 
@@ -23,7 +23,3 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C3173AA6 &
 
     # Setup node packages
     npm install -g jshint
-
-RUN echo deb http://ppa.launchpad.net/builds/sphinxsearch-rel22/ubuntu trusty main > /etc/apt/sources.list.d/sphinxsearch-trusty.list && \
-    apt-get update && \
-    apt-get install -yq --no-install-recommends sphinxsearch
