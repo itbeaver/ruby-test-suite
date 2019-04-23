@@ -21,5 +21,5 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C3173AA6 &
 
     # Setup Rubygems
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install bundler -v "1.17.3" && gem install static_code_analyzer -v "=0.1.3" && gem update --system && \
-
+    gem install bundler -v "1.17.3" && gem install static_code_analyzer -v "=0.1.3" && gem update --system
+    
