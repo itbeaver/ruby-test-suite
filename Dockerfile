@@ -3,7 +3,7 @@ MAINTAINER Alexander Bobrov, ITBeaver <al.bobrov@itbeaver.co>
 
 RUN apt-get update \
   &&  apt-get upgrade -y --force-yes \
-  &&  apt-get install -y --force-yes \
+  &&  apt-get install --allow --force-yes \
       libssl-dev \
       libreadline-dev \
       zlib1g-dev \
@@ -12,17 +12,13 @@ RUN apt-get update \
       curl \
       git \
       build-essential \
-      dtach \
       imagemagick \
       libmagick++-dev \
       libqtwebkit-dev \
       libffi-dev \
       mysql-client \
       libmysqlclient-dev \
-      libxslt1-dev \
-      redis-tools \
       xvfb \
-      python \
       tzdata \
       phantomjs \
       wkhtmltopdf \
