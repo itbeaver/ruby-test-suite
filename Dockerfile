@@ -49,7 +49,7 @@ RUN eval "$(rbenv init -)"; rbenv install $RBENV_VERSION \
 &&  rm -rf /tmp/*
 
 # node.js LTS install
-RUN curl --silent --location https://deb.nodesource.com/setup_6.x | bash - \
+RUN curl --silent --location https://deb.nodesource.com/setup_10.x | bash - \
   && apt-get install -y nodejs \
   && npm -g up
 
