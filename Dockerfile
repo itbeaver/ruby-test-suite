@@ -56,8 +56,4 @@ RUN curl --silent --location https://deb.nodesource.com/setup_10.x | bash - \
 # yarn install
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
-RUN localedef ru_RU.UTF-8 -i ru_RU -fUTF-8 &&\
-    locale-gen ru_RU.UTF-8 &&\
-
-    # Setup node packages
-    npm install -g jshint
+RUN npm install -g jshint
