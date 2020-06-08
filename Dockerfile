@@ -46,18 +46,10 @@ RUN eval "$(rbenv init -)"; rbenv install $RBENV_VERSION \
 &&  eval "$(rbenv init -)"; rbenv global $RBENV_VERSION \
 &&  eval "$(rbenv init -)"; gem update --system \
 &&  eval "$(rbenv init -)"; gem install bundler -v "1.17.3" -f \
-&&  rm -rf /tmp/* \
+&&  rm -rf /tmp/*
 
 # node.js LTS install
 RUN curl --silent --location https://deb.nodesource.com/setup_6.x | bash - \
   && apt-get install -y nodejs \
   && npm -g up
 
-# yarn install
-RUN curl -o- -L https://yarnpkg.com/install.sh | bash
-
-RUN localedef ru_RU.UTF-8 -i ru_RU -fUTF-8 &&\
-    locale-gen ru_RU.UTF-8 &&\
-
-    # Setup node packages
-    npm install -g jshint
