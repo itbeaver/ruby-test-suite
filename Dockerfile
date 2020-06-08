@@ -2,24 +2,20 @@ FROM ubuntu:18.04
 MAINTAINER Alexander Bobrov, ITBeaver <al.bobrov@itbeaver.co>
 
 RUN apt-get update \
-  &&  apt-get upgrade -y --force-yes \
-  &&  apt-get install --allow --force-yes \
+  &&  apt-get upgrade -y \
+  &&  apt-get install -y \
       libssl-dev \
       libreadline-dev \
-      zlib1g-dev \
-      language-pack-ja \
       wget \
       curl \
       git \
       build-essential \
       imagemagick \
       libmagick++-dev \
-      libqtwebkit-dev \
       libffi-dev \
       mysql-client \
       libmysqlclient-dev \
       xvfb \
-      tzdata \
       phantomjs \
       wkhtmltopdf \
   &&  apt-get clean \
